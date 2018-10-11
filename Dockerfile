@@ -40,6 +40,9 @@ rm -rf /opt/tomcat/webapps/ROOT
 # Add admin/admin user
 ADD tomcat-users.xml /opt/tomcat/conf/
 
+# Add connection timeout config
+ADD server.xml /opt/tomcat/conf/
+
 ENV CATALINA_HOME /opt/tomcat
 ENV PATH $PATH:$CATALINA_HOME/bin
 
